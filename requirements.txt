@@ -14,3 +14,53 @@ python-dotenv==1.0.1
 spacy==3.7.5
 
 requests==2.32.3
+
+## Quick Start (Windows/PowerShell)
+
+```powershell
+# 1) Create and activate venv
+python -m venv .venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+
+# 2) Install dependencies
+.\.venv\Scripts\python -m pip install --upgrade pip
+.\.venv\Scripts\python -m pip install -r requirements.txt
+.\.venv\Scripts\python -m spacy download en_core_web_sm  # optional but recommended
+
+# 3) Seed DB (SQLite file app.db will be created)
+.\.venv\Scripts\python -m backend.seed
+
+# 4) Run backend API
+.\.venv\Scripts\python -m flask --app backend.app:create_app run --debug
+# Health: http://127.0.0.1:5000/api/health
+
+# 5) Run Streamlit UI (in a second terminal)
+.\.venv\Scripts\python -m streamlit run app\ui_app.py
+# Toggle "Use backend API" in the sidebar; default URL http://127.0.0.1:5000
+```
+
+## API (Flask)
+- GET `/api/health` → `{ "status": "ok" }`
+- GET `/api/jobs?limit=20&page=1` → list jobs
+- POST `/api/jobs/seed` → seed from `data/jobs_sample.csv`
+- POST `/api/users` → `{ email, name?, role?, resume_text? }`
+- PUT `/api/users/{id}/resume` → `{ resume_text }`
+- POST `/api/match` → `{ resume_text?, user_id?, weight_tfidf?, weight_skills?, top_k? }`
+  - Returns `items: [{ id, job_id, title, company, location, skills, score }]`
+
+## Configuration
+- Database: `DATABASE_URL` (default `sqlite:///app.db`)
+  - Example Postgres: `postgresql+psycopg2://user:pass@host:5432/dbname`
+- Skills list: `data/skills_master.txt`
+- Jobs CSV: `data/jobs_sample.csv`
+
+## Troubleshooting
+- Activation blocked: `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
+- “No module named …”: install in venv, e.g. `.\.venv\Scripts\python -m pip install pdfminer.six python-docx rapidfuzz nltk`
+- spaCy model: `.\.venv\Scripts\python -m spacy download en_core_web_sm`
+- Metadata/compile errors: `pip install --upgrade pip setuptools wheel` and try `--only-binary=:all:` for heavy libs
+- “git is not recognized”: add `C:\Program Files\Git\cmd` to PATH or use a PowerShell shim for `git`
+
+## License
+MIT (add your name/year)
