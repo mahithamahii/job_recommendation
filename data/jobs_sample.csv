@@ -1,0 +1,8 @@
+job_id,title,company,location,description,skills
+J001,Data Scientist,Acme Analytics,Bengaluru,"We are looking for a Data Scientist to build predictive models using Python, scikit-learn, and SQL. Experience with feature engineering, model evaluation, and cloud platforms (AWS/Azure) is a plus.",Python;scikit-learn;SQL;AWS;Azure;Pandas
+J002,Machine Learning Engineer,Innova Tech,Hyderabad,"Design, deploy, and maintain ML pipelines. Strong knowledge of TensorFlow or PyTorch, MLOps, Docker, and CI/CD. Familiarity with APIs and microservices.",TensorFlow;PyTorch;MLOps;Docker;CI/CD;APIs
+J003,Backend Engineer,ByteWorks,Pune,"Build scalable backend services in Node.js or Python (FastAPI). Knowledge of REST, databases (PostgreSQL), and caching (Redis). Experience in cloud (GCP/AWS) preferred.",Node.js;Python;FastAPI;REST;PostgreSQL;Redis;AWS;GCP
+J004,Data Analyst,Insight Labs,Chennai,"Analyze datasets, build dashboards, and present insights. Tools include SQL, Excel, Power BI/Tableau, and Python for basic analysis.",SQL;Excel;Power BI;Tableau;Python
+J005,NLP Engineer,LangAI,Mumbai,"Work on NLP tasks including text classification, NER, and embeddings. Experience with spaCy, Hugging Face Transformers, and vector databases is desirable.",NLP;spaCy;Hugging Face;Transformers;Embeddings;Vector DB;Python
+
+

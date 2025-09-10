@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual env
+.venv/
+venv/
+ENV/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local data/db
+app.db
+*.sqlite*
+
+# Env files
+.env
+*.env
+
+# Streamlit
+.streamlit/
+
+# Logs
+logs/
+*.log
+
+

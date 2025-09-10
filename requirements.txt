@@ -1,0 +1,16 @@
+streamlit==1.36.0
+pandas==2.2.3
+numpy==2.3.2
+scikit-learn==1.5.2
+pdfminer.six==20240706
+python-docx==1.1.2
+nltk==3.9.1
+rapidfuzz==3.9.6
+Flask==3.0.3
+Flask-Cors==4.0.1
+SQLAlchemy==2.0.32
+pydantic==2.8.2
+python-dotenv==1.0.1
+spacy==3.7.5
+
+requests==2.32.3

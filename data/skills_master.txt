@@ -1,0 +1,33 @@
+python
+java
+sql
+excel
+pandas
+numpy
+scikit-learn
+tensorflow
+pytorch
+nlp
+spacy
+hugging face
+transformers
+aws
+azure
+gcp
+docker
+ci/cd
+apis
+rest
+fastapi
+postgresql
+redis
+power bi
+tableau
+embeddings
+vector db
+feature engineering
+model evaluation
+mlops
+microservices
+
+
